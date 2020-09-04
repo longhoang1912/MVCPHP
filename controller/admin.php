@@ -55,9 +55,7 @@ class admin extends user
             $status = $_POST['stt'];
             $time = date("Y/m/d");
             $this->model->add($title,$des,$img,$status, $time);
-
             $this->index();
-            
         }
         
         }

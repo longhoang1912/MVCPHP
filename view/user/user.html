@@ -32,7 +32,7 @@
 			<tr>
 				<td style="width: 3%"><center><?php echo $item['id'];?></center></td>
 				<td style="width: 15%" height="250"><center><img src =<?php echo $item['image'];?> alt='anh'></center></td>
-				<td style="width: 60%"><center><h3><?php echo $item['title']?></h3></center></td>
+				<td style="width: 60%"><center><h3><a href=<?php echo "index.php?controller=user&action=title&id=".$item['id']?>><?php echo $item['title']?></a></h3></center></td>
 				
 			</tr>
 

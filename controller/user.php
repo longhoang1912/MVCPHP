@@ -13,7 +13,8 @@ class user
         require "view/user/user.html";
 
     }
-    public function title($id){
+    public function title(){
+        $id = $_GET['id'];
         $b = $this->model->get($id);
         $title = $b['title'];
         $img = $b['img'];
