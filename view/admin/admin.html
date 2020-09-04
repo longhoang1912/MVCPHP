@@ -17,9 +17,9 @@
 	</h3>
 </head>
 <body>
-	<a class="btn btn-primary" href="index.php?controller=admin&action=addnew	" style="
+	<a class="btn btn-primary" href="index.php?controller=admin&action=addnew" style="
     margin-left: 1350px;
-" role="button">Link</a>
+" role="button">NEW</a>
 	<center>
 		<table class="table table-bordered">
 		<tr class="thead-dark">
@@ -34,8 +34,8 @@
 			<tr>
 				<td style="width: 3%"><center><?php echo $item['id'];?></center></td>
 				<td style="width: 15%"><center><img src =<?php echo $item['image'];?> alt='anh'></center></td>
-				<td style="width: 60%"><center><h3><?php echo $item['title'];?></h3></center></td>
-				<td style="width: 5%"> <center><a href=<?php echo "index.php?controller=admin&action=show&id=".$item['id'] ?>>show</a>|<a href=<?php echo "index.php?controller=admin&action=edit&id=".$item['id'] ?>>edit</a>|<a href=<?php echo "index.php?controller=admin&action=delete&id=".$item['id'] ?>>delete</a></center></td>
+				<td style="width: 55%"><center><h3><?php echo $item['title'];?></h3></center></td>
+				<td style="width: 10%"> <center><a href=<?php echo "index.php?controller=admin&action=show&id=".$item['id'] ?>>show</a>|<a href=<?php echo "index.php?controller=admin&action=edit&id=".$item['id'] ?>>edit</a>|<a href=<?php echo "index.php?controller=admin&action=delete&id=".$item['id'] ?>>delete</a></center></td>
 			</tr>
 			<?php
 			}
