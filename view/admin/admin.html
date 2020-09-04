@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+	<title>testPHP</title>
+	<style>
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+	</style>
+	<h3>
+		<?php
+		require_once("header.html");
+		?>
+
+	</h3>
+</head>
+<body>
+	<a class="btn btn-primary" href="index.php?controller=admin&action=addnew	" style="
+    margin-left: 1350px;
+" role="button">Link</a>
+	<center>
+		<table class="table table-bordered">
+		<tr class="thead-dark">
+			<th><center>ID</center></th>
+			<th><center>image</center></th>
+			<th><center>title</center></th>
+			<th><center>action</center></th>
+		</tr>
+			<?php
+				foreach($pr as $item){
+			?>
+			<tr>
+				<td style="width: 3%"><center><?php echo $item['id'];?></center></td>
+				<td style="width: 15%"><center><img src =<?php echo $item['image'];?> alt='anh'></center></td>
+				<td style="width: 60%"><center><h3><?php echo $item['title'];?></h3></center></td>
+				<td style="width: 5%"> <center><a href=<?php echo "http://localhost/PHP/index.php?controller=admin&action=show&id=".$item['id'] ?>>show</a>|<a href=<?php echo "http://localhost/PHP/index.php?controller=admin&action=edit&id=".$item['id'] ?>>edit</a>|<a href=<?php echo "http://localhost/PHP/index.php?controller=admin&action=delete&id=".$item['id'] ?>>delete</a></center></td>
+			</tr>
+			<?php
+			}
+			?>
+	</table>
+	</center>
+</body>
+</html>

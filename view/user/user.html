@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"> -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+	<title>testPHP</title>
+	<style>
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+	</style>
+	<h3><?php
+		include("header.html");
+		
+		?></h3>
+</head>
+<body>
+	
+	<center>
+	<table class="table table-bordered">
+		<tr class="thead-dark">
+			<th><center>ID</center></th>
+			<th><center>image</center></th>
+			<th><center>title</center></th>
+		</tr>
+			<?php
+				foreach($pr as $item){
+			?>
+			<tr>
+				<td style="width: 3%"><center><?php echo $item['id'];?></center></td>
+				<td style="width: 15%" height="250"><center><img src =<?php echo $item['image'];?> alt='anh'></center></td>
+				<td style="width: 60%"><center><h3><?php echo $item['title']?></h3></center></td>
+				
+			</tr>
+
+			<?php
+			}
+			?>
+	</table>
+	</center>
+	<!-- <form action="http://localhost/PHP/index.php" method="post" name ="sel">
+		<select name="page"  >
+			<option selected hidden value="1">Page</option>
+			<?php
+				for($x=1; $x<=$b; $x++){
+				?>
+				<option value=<?php echo $x; ?>> <?php echo $x ?></option>
+				<?php
+				}
+			?>
+		</select>
+		<input type="submit" name="submit" value="Go"/>
+	</form> -->
+</body>
+</html>
