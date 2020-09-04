@@ -32,7 +32,7 @@ class admin extends user
         $img = $b["img"];
         require "view/admin/edit.html";
     }
-    public function upload(){
+    public function update(){
         
         if(isset($_POST['update'])){
             $id = $_GET['id'];
